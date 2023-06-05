@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <head>
+        <title>Instrument</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css\style.css">
+        <script src="js\master.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+      </head>
+</head>
+<body>
+    <h1>악기</h1>
+    <script>
+        inst = ["피아노", "바이올린", "기타", "트럼펫", "피리", "팀파니", "첼로", "바순"];
+    </script>
+    
+    <h2>
+    <ul>
+    <script>
+        var i = 0;
+        while (i < inst.length){
+            document.write('<li><a href="https://ko.wikipedia.org/wiki/' + inst[i] + '"' + "target='_blank'>" + inst[i] + '</a>' + '</li>');
+            document.write('<img src= "images/inst_' + i + '.jpg" width= 230px height= 220px>')
+            i = i + 1;
+        }
+        
+        $('a').css('color', 'black')
+        // var i = 0;
+        // while (i < document.querySelectorAll('a').length) {
+        //     document.querySelectorAll('a')[i].style.color = 'black';
+        //     i = i + 1;
+        // }
+    </script>
+    </ul>
+    </h2>
+
+    <div style="position: fixed; bottom: 30px; right: 30px;">
+        <input id="night_day_2" type="button" value="night" onclick="nightDayHandler(this)" 
+        style="
+        height: 50px; width: 100px; 
+        background-color: rgb(74, 78, 82);
+        color: aliceblue;"/>
+    </div>
+</body>
+</html>
